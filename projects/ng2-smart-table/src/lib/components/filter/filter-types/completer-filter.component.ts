@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { CompleterService } from 'ng2-completer';
+import { CompleterService } from 'ngx-completer';
 
 import { DefaultFilter } from './default-filter';
 import { distinctUntilChanged, debounceTime, map } from 'rxjs/operators';
@@ -8,14 +8,14 @@ import { distinctUntilChanged, debounceTime, map } from 'rxjs/operators';
 @Component({
   selector: 'completer-filter',
   template: `
-    <ng2-completer [(ngModel)]="query"
+    <ngx-completer [(ngModel)]="query"
                    (ngModelChange)="inputTextChanged($event)"
                    [dataService]="column.getFilterConfig().completer.dataService"
                    [minSearchLength]="column.getFilterConfig().completer.minSearchLength || 0"
                    [pause]="column.getFilterConfig().completer.pause || 0"
                    [placeholder]="column.getFilterConfig().completer.placeholder || 'Start typing...'"
                    (selected)="completerContent.next($event)">
-    </ng2-completer>
+    </ngx-completer>
   `,
 })
 export class CompleterFilterComponent extends DefaultFilter implements OnInit {
