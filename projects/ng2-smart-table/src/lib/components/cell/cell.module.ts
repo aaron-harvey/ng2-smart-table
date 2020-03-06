@@ -33,7 +33,7 @@ const CELL_COMPONENTS = [
   imports: [
     CommonModule,
     FormsModule,
-    NgxCompleterModule,
+    // NgxCompleterModule,
   ],
   declarations: [
     ...CELL_COMPONENTS,

@@ -1,8 +1,9 @@
-import { Output, EventEmitter, Input } from '@angular/core';
+import { Output, EventEmitter, Input, Directive } from '@angular/core';
 
 import { Column } from '../../lib/data-set/column';
 import { DataSource } from '../../lib/data-source/data-source';
 
+@Directive()
 export class FilterDefault {
 
   @Input() column: Column;
