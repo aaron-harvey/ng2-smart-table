@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { CompleterService } from 'ngx-completer';
+import { CompleterService } from 'ng2-completer';
 
 import { DefaultEditor } from './default-editor';
 
 @Component({
   selector: 'completer-editor',
   template: `
-    <ngx-completer [(ngModel)]="completerStr"
+    <ng2-completer [(ngModel)]="completerStr"
                    [dataService]="cell.getColumn().getConfig().completer.dataService"
                    [minSearchLength]="cell.getColumn().getConfig().completer.minSearchLength || 0"
                    [pause]="cell.getColumn().getConfig().completer.pause || 0"
                    [placeholder]="cell.getColumn().getConfig().completer.placeholder || 'Start typing...'"
                    (selected)="onEditedCompleter($event)">
-    </ngx-completer>
+    </ng2-completer>
     `,
 })
 export class CompleterEditorComponent extends DefaultEditor implements OnInit {
